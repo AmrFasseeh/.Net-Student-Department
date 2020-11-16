@@ -1,0 +1,29 @@
+﻿@model Department
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditView</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="/department/edit/@Model.Dept_id" method="post">
+                    <div class="form-group">
+                        <label class="col-form-label">Dept Name: </label>
+                        <input type="text" class="form-control" name="dept_name" value="@Model.Dept_name"/>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Update Dept" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
